@@ -1,0 +1,20 @@
+# secrets
+.env
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# editors / os
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
