@@ -1,0 +1,49 @@
+name: Bug report
+description: Something behaved differently from what the README documents
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do **not** report a read-only guard bypass here — use
+        [private vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability) instead.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Include the tool name and the exact arguments you passed.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Redact hostnames, credentials and data. A tool call plus the response is ideal.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: dropdown
+    id: mutating
+    attributes:
+      label: Was MCP_ENABLE_MUTATING_TOOLS set?
+      options: ["No (default)", "Yes", "Not sure"]
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Client (Claude Code, Cursor, Codex, ...), Python version, OS, MySQL version if relevant.
+    validations:
+      required: true

@@ -1,0 +1,31 @@
+name: Feature request
+description: Suggest a new tool, guard or configuration option
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do that the server does not support?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+      description: If it adds a tool, say whether it is read-only and why it must exist (tools are part of the agent's attack surface).
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: This request does not require widening the read-only SQL whitelist.
+        - label: If it does, I have explained why the current whitelist blocks a legitimate read.
