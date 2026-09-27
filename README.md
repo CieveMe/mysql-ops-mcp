@@ -1,5 +1,7 @@
 # mysql-ops-mcp
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23003962.svg)](https://doi.org/10.5281/zenodo.23003962)
+
 **A read-only-first MCP server that lets an AI agent query a private MySQL database — and, only if you say so, operate the server it lives on.**
 
 Built for the common real-world case: the database has no public port, no VPN, only SSH. This server opens and maintains its own SSH tunnel, exposes the data as MCP tools, and refuses anything that is not a single read statement.

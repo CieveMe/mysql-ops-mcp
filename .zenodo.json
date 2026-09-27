@@ -1,0 +1,35 @@
+{
+  "title": "mysql-ops-mcp: a read-only-first MCP server for agent access to SSH-only MySQL databases",
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "He, Zhen",
+      "orcid": "0009-0009-1526-5793"
+    }
+  ],
+  "description": "<p>A Model Context Protocol (MCP) server that lets an AI agent query a private MySQL database — and, only if explicitly enabled, operate the server it lives on.</p><p>Built for the common real-world case where the database has no public port and no VPN, only SSH: the server opens and maintains its own SSH tunnel (pure paramiko), exposes the data as MCP tools, and refuses any statement that is not a single read statement. 17 tools are registered by default and all are read-only; state-changing tools (restart, deploy backend, deploy frontend) are not registered at all unless an opt-in flag is set, and are additionally gated by a container allowlist.</p><p>Statement validation runs before execution: single-statement only, comments stripped, rows capped. 24 unit tests cover the SQL guard, including comment-smuggling and stacked-statement attempts, and need no database.</p><p>The SQL guard is a backstop, not the primary control: the documented deployment is a read-only database account.</p>",
+  "keywords": [
+    "MCP",
+    "Model Context Protocol",
+    "MySQL",
+    "agent tooling",
+    "least privilege",
+    "read-only",
+    "SSH tunnel"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/CieveMe/mysql-ops-mcp",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://orcid.org/0009-0009-1526-5793",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
+    }
+  ]
+}
