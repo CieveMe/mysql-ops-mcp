@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "mysql-ops-mcp: a read-only-first MCP server for agent access to SSH-only MySQL databases"
+abstract: >-
+  An MCP (Model Context Protocol) server that lets an AI agent query a private MySQL database
+  safely. It maintains its own SSH tunnel so the database never needs a public port, validates
+  every statement against a read-only whitelist before execution, and keeps state-changing tools
+  (restart / deploy) unregistered unless they are explicitly enabled.
+type: software
+authors:
+  - family-names: He
+    given-names: Zhen
+    orcid: "https://orcid.org/0009-0009-1526-5793"
+    alias: CieveMe
+version: 0.1.0
+date-released: "2026-09-28"
+license: MIT
+repository-code: "https://github.com/CieveMe/mysql-ops-mcp"
+keywords:
+  - MCP
+  - Model Context Protocol
+  - MySQL
+  - agent tooling
+  - least privilege
+  - read-only

@@ -9,10 +9,10 @@ tags:
   - least privilege
 authors:
   - name: Zhen He
-    orcid: TODO  # required by JOSS; owner action
+    orcid: 0009-0009-1526-5793
     affiliation: '1'
 affiliations:
-  - name: TODO  # JOSS requires an affiliation for every author; owner action
+  - name: Independent Researcher
     index: 1
 date: 28 September 2026
 bibliography: paper.bib
